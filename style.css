@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #00c6ff, #0072ff);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    z-index: 1000;
+    height: 60px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    opacity: 0.7;
+}
+
+/* Hero */
+header {
+    padding: 150px 20px 80px;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
+/* Resume Button */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: white;
+    color: #4e73df;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 900px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+}
+
+/* Tech Badges */
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.badges span {
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+    animation: float 3s ease-in-out infinite;
+}
+
+.badges span:hover {
+    transform: scale(1.1);
+    background: white;
+    color: #4e73df;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Project Cards */
+.project-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background: white;
+    color: #4e73df;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        margin: 20px;
+    }
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form button {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    color: #4e73df;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+}
+
+.contact-info {
+    margin-top: 20px;
+    opacity: 0.9;
+}
